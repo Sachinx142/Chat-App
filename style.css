@@ -1,0 +1,124 @@
+/* Parent container of the chat */
+.mid-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh; /* Adjust height to make it responsive */
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional for better layout visibility */
+    background-color: #f8f9fa; /* Light gray background */
+    max-width: 600px; /* Optional for smaller layouts */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Chat message display area */
+.first {
+    flex-grow: 1;
+    overflow-y: auto; /* Adds vertical scrollbar when content exceeds */
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd; /* Border for better separation */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Scrollbar style */
+.first::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+}
+.first::-webkit-scrollbar-thumb {
+    background-color: #888; /* Thumb color */
+    border-radius: 10px; /* Rounded corners for thumb */
+}
+
+.first::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker color on hover */
+}
+
+.first::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+}
+
+/* Input box area */
+.second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%; /* Adjust to fit within container */
+}
+
+/* Input and button styling */
+.second form {
+    width: 100%;
+    max-width: 600px;
+}
+
+.second .form-control {
+    border-radius: 0;
+    border: 1px solid #ccc;
+}
+
+.second .btn {
+    border-radius: 0;
+    border-left: none;
+}
+
+/* Styling for messages */
+.alert-primary,
+.alert-secondary,
+.alert-danger {
+    width: 70%;
+    clear: both;
+    text-align: left;
+    margin-bottom: 10px; /* Adds spacing between messages */
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.alert-primary {
+    float: right;
+    background-color: #d1ecf1; /* Light blue for user messages */
+    text-align: right;
+    color: #0c5460; /* Dark text for readability */
+}
+
+.alert-secondary {
+    float: left;
+    background-color: #e2e3e5; /* Light gray for received messages */
+    text-align: left;
+    color: #383d41; 
+}
+
+.alert-danger {
+    margin: auto;
+    text-align: center;
+    background-color: #f8d7da; /* Red for system messages */
+    color: #721c24;
+}
+
+/* Centered info messages (user joined/left) */
+.alert-info {
+    text-align: center;
+    clear: both;
+    background-color: #cce5ff; /* Light blue background */
+    color: #004085; /* Dark blue for text */
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    margin: 10px 0;
+    width: 100%; /* Ensure it spans across the chat area */
+}
+
+
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .mid-section {
+        width: 95%;
+    }
+
+    .first, .second {
+        width: 100%;
+    }
+}
